@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html'%}
+{% block content %}
+ <div class="col text-center justify-content-center align-self-center" style="padding-top:120px;">
+    <h1>LOGIN</h1>
+    <form method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+        {{field.error}}
+        <label>{{field.label}}</label>
+        <input style="width:500px;margin-left:415px;" type="{% if field.label == 'Password'%}password{% else %}input{% endif %}" name="{{field.name}}" class="col text-center form-control" required>
+      {% endfor %}
+        <br>
+        <button type="submit" value="submit" class="btn btn-success">login</button>
+        <br>
+        <br>
+        <a href="{% url 'signup' %}" class="btn btn-info">Not Registered yet? Sign Up!</a>
+        <br>
+        <br>
+        <a href="{% url 'index'%}" class="btn btn-warning">Calender Home</a>
+    </form>
+</div>
+
+
+{% endblock%}

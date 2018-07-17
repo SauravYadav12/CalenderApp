@@ -1,0 +1,9 @@
+<div class="col-lg-6 mx-auto text-center">
+  <br>
+  <h2>{{entry.name}}</h2>
+  <h4>{{entry.date|date:'Y M d'}}</h4>
+  <p>{{entry.description|truncatechars:30}}</p>
+  <a href="{% url 'details' pk=entry.id %}" class="btn btn-primary">View details</a>
+  <a href="{% url 'delete' pk=entry.id %}" class="btn btn-danger">Delete</a>
+  <br>
+</div>

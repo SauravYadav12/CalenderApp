@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html'%}
+{% block content %}
+<div class="col text-center justify-content-center align-self-center"
+     style="padding-top:100px;">
+  <h1 class="bg-info text-white" style="margin-left:300px; margin-right:300px;">{{entry.name}}</h1>
+  <p>{{entry.date}}</p>
+  <h3>{{entry.description}}</h3>
+  <br>
+  <br>
+  <a href="{% url 'calender'%}" class="btn btn-success">Go back</a>
+  <a href="{% url 'delete' pk=entry.id %}" class="btn btn-danger">Delete</a>
+</div>
+{% endblock %}

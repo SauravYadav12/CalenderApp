@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html'%}
+{% block content %}
+
+<div class="col text-center justify-content-center align-self-center" style="padding-top:250px;">
+  <h1>Calender Application</h1>
+  <p>Keep track of your events</p>
+  <a href="{% url 'login'%}" class="btn btn-success">Login</a>
+  <a href="{% url 'signup'%}" class="btn btn-info">Sign up</a>
+</div>
+
+
+{% endblock %}
